@@ -29,7 +29,7 @@ $allMembersHash = $result->stats->soloRoundHashes;
 $diff = $response->network->difficulty;
 $luckyCurrent = $allMembersHash / $diff * 100;
 $formatted_lucky = number_format($luckyCurrent, 0, ',', ' ');
-$luckyText = "A sorte do bloco atual é de  <b>$formatted_lucky%</b> ";
+$luckyText = "A sorte do bloco é de <b>$formatted_lucky%</b> ";
 $sharesSum = 0;
 $findBlock = 0;
 $blockCountOffline = file_get_contents("bloco.txt");
@@ -100,7 +100,7 @@ if ($findBlock) {
 $time = date('d/m/Y H:i:s');
  while(true) {
    $now = time();
-     if($now + 300 > time()){
+     if($now + 600 > time()){
      FindNewBlock();
      echo "Enviado mensagem telegram $time<br>";
    sleep(300);
