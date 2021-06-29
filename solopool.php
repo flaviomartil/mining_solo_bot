@@ -38,14 +38,14 @@ $inverseMsg = [];
 $excel = [];
 foreach ($workers as $worker) {
   if ($worker->hashrate_6h > 0){
-  $sharesSum += $worker->hashesSinceBlock;
+  $sharesSum += ($worker->hashrate_6h);
   }
 }
 
 foreach ($workers as $worker) {
     if ($worker->hashrate_6h > 0){
   $name = $worker->name;
-  $porcent = $worker->hashesSinceBlock * 100 /$sharesSum;
+  $porcent = ($worker->hashrate_6h * 100) /$sharesSum;
   $formatted_value = number_format($porcent, 1, ',', ' ');
   $currentMemberEffort[] =  [
     'name' =>  $name,
@@ -103,7 +103,7 @@ $time = date('d/m/Y H:i:s');
      if($now + 600 > time()){
      FindNewBlock();
      echo "Enviado mensagem telegram $time<br>";
-   sleep(300);
+   sleep(600);
     }
  }
 FindNewBlock();
