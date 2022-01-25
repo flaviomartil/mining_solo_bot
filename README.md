@@ -19,5 +19,5 @@ $headers[] = 'cookie: SLG_GWPT_Show_Hide_tmp=1; SLG_wptGlobTipTmp=1; mining_addr
 
 <h3>You need to register a bot on @BotFather and get the api_key to replace in the line</h3>
 
-$apiToken = "1818080797:AAHOwkvxIXfHqjZZYf-HYkjJ-yuPLDmAd7Q";
+$apiToken = "";
 The gif when you find a block is an inside joke and you can change it. 
